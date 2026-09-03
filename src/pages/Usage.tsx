@@ -64,6 +64,47 @@ const Usage = () => {
                 and copy the data, and paste it into SockDrawer as described
                 above.
               </li>
+              <li key="ul4">
+                Within the double-clicked button dialog you can assign a social
+                button to a hot button by clicking a hot button on the 2x6 grid
+                of hot buttons.
+                <ul>
+                  <li key="ul4_li1">
+                    If a hot button is already assigned, and you want to
+                    overwrite it, you can either check the "Allow ovewrite"
+                    checkbox, or click the "Clear" button below the hot button
+                    to clear out its current contents and allow a new
+                    assignment.
+                  </li>
+                  <li key="ul4_li2">
+                    You can select which hot bar and page to assign to either by
+                    clicking on a row in the table of hot buttons that the
+                    social button is already assigned to, or you can manually
+                    select the hot bar and page via the drop downs above the hot
+                    buttons.
+                  </li>
+                  <li key="ul4_li3">
+                    If you made a mistake in the hot button assignment, you can
+                    click the same hot button again, and it will revert to its
+                    previous assignment.
+                  </li>
+                  <li key="ul4_li4">
+                    The social button edit(s) and hot button assignment(s) will
+                    be saved when you click the "Accept" button. If you click
+                    the "X" in the upper right corner of the dialog, all social
+                    button editing and hot button assignment changes will be
+                    discarded.
+                  </li>
+                  <li key="ul4_li5">
+                    Note: hot buttons that are not set to social buttons, for
+                    example clickable items or commands such as "sit", will
+                    display as "occupied" instead of how they appear in game.
+                    This is because SockDrawer does not have access to the
+                    in-game icons, so it cannot display them as they appear in
+                    game.
+                  </li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li>
