@@ -17,7 +17,7 @@ const re = /E[0-9]+/;
 const onLinkedHotButtons = (
   socialButton: SocialButtonLoc,
   operation: (hotButton: HotButtonLoc, suffix: string) => void,
-  iniData: IniData
+  iniData: IniData,
 ): void => {
   const ePrefix = "E" + pageButtonToHotButtonIndex(socialButton);
   for (let hotButtonsBar = 1; hotButtonsBar <= 11; hotButtonsBar++) {
@@ -44,7 +44,7 @@ const onLinkedHotButtons = (
                   pageNum: hotButtonsPage,
                   buttonNum: hotButtonsButton,
                 },
-                value.replace(re, "")
+                value.replace(re, ""),
               );
             }
           }
@@ -57,7 +57,7 @@ const onLinkedHotButtons = (
 const linkHotButtonToSocialButton = (
   hotButton: HotButtonData,
   socialButton: SocialButtonLoc,
-  iniData: IniData
+  iniData: IniData,
 ): void => {
   //console.log("hb: " + JSON.stringify(hotButton));
   let barKey = hotBarToKey(hotButton.hotButtonLoc.barNum);

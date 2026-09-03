@@ -1,4 +1,4 @@
-import { useCallback, useReducer, useEffect } from "react";
+import { useCallback, useReducer, useEffect, useState } from "react";
 
 import IniData from "../IniData";
 import SocialButtonData from "../SocialButtonData";
@@ -19,6 +19,56 @@ import { colors } from "../utils/colors";
 import { altActName } from "../utils/altAct";
 import PasteJSONBox from "./PasteJSONBox";
 import CopyButton from "./CopyButton";
+import {
+  pageButtonToColorKey,
+  pageButtonToHotButtonIndex,
+  pageButtonToKeyPrefix,
+  pageButtonToNameKey,
+} from "../utils/pageButtonUtils";
+
+const hotBarToKey = (hotBarNum: number): string => {
+  return "HotButtons" + (hotBarNum === 1 ? "" : hotBarNum);
+};
+
+const hotBarNumbers = Array.from(Array(11), (_, idx) => idx + 1);
+const hotPageNumbers = Array.from(Array(10), (_, idx) => idx + 1);
+const hotButtonNumbers = Array.from(Array(12), (_, idx) => idx + 1);
+
+const hotButtonValueToSocialButtonLoc = (value: string): SocialButtonLoc | null => {
+  const match = value.match(/^E([0-9]+)(?:,.*)?$/);
+  if (!match) return null;
+
+  const index = Number(match[1]);
+  if (!Number.isFinite(index)) return null;
+
+  return {
+    pageNum: Math.floor(index / 12) + 1,
+    buttonNum: (index % 12) + 1,
+  };
+};
+
+const hotButtonDisplayValue = (
+  value: string,
+  iniData: IniData
+): { text: string; isOccupied: boolean; textColor?: string } => {
+  if (!value) return { text: "", isOccupied: false };
+
+  const socialButtonLoc = hotButtonValueToSocialButtonLoc(value);
+  if (!socialButtonLoc) return { text: "occupied", isOccupied: true };
+
+  const nameKey = pageButtonToNameKey(socialButtonLoc);
+  const colorKey = pageButtonToColorKey(socialButtonLoc);
+  const section = iniData.Socials;
+  const name = section && nameKey in section ? section[nameKey] : "";
+  const colorValue = section && colorKey in section ? section[colorKey] : "";
+  const textColor = colorValue ? colors[Number(colorValue)] ?? colorValue : undefined;
+
+  return {
+    text: name || "occupied",
+    isOccupied: !name,
+    textColor,
+  };
+};
 
 type SocialButtonAction =
   | { type: "SET_NAME"; payload: string }
@@ -66,6 +116,24 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
     color: "",
     lines: ["", "", "", "", ""],
   });
+  const [linkedHotButtons, setLinkedHotButtons] = useState<HotButtonData[]>([]);
+  const [selectedBar, setSelectedBar] = useState<number>(1);
+  const [selectedPage, setSelectedPage] = useState<number>(1);
+  const [allowOverwrite, setAllowOverwrite] = useState<boolean>(false);
+  const [originalHotButtonAssignments, setOriginalHotButtonAssignments] =
+    useState<Record<string, string>>({});
+
+  const refreshLinkedHotButtons = useCallback(() => {
+    const nextLinkedHotButtons: HotButtonData[] = [];
+    onLinkedHotButtons(
+      buttonLoc,
+      (button: HotButtonLoc, suffix: string) => {
+        nextLinkedHotButtons.push({ hotButtonLoc: button, suffix });
+      },
+      iniData
+    );
+    setLinkedHotButtons(nextLinkedHotButtons);
+  }, [buttonLoc, iniData]);
 
   useEffect(() => {
     // Load initial data from loadSocialButtonData when component mounts
@@ -73,7 +141,28 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
     dispatch({ type: "SET_NAME", payload: initialData.name });
     dispatch({ type: "SET_COLOR", payload: initialData.color });
     dispatch({ type: "SET_LINES", payload: initialData.lines });
-  }, [buttonLoc, iniData]);
+
+    const nextLinkedHotButtons: HotButtonData[] = [];
+    onLinkedHotButtons(
+      buttonLoc,
+      (button: HotButtonLoc, suffix: string) => {
+        nextLinkedHotButtons.push({ hotButtonLoc: button, suffix });
+      },
+      iniData
+    );
+
+    if (nextLinkedHotButtons.length > 0) {
+      const defaultHotButton = nextLinkedHotButtons[0].hotButtonLoc;
+      setSelectedBar(defaultHotButton.barNum);
+      setSelectedPage(defaultHotButton.pageNum);
+    } else {
+      setSelectedBar(1);
+      setSelectedPage(1);
+    }
+    setLinkedHotButtons(nextLinkedHotButtons);
+    setOriginalHotButtonAssignments({});
+    setAllowOverwrite(false);
+  }, [buttonLoc, showModal]);
 
   // Memoized callbacks to update the corresponding state properties
   const handleNameChange = useCallback((newValue: string) => {
@@ -115,8 +204,6 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
     }
   };
 
-  const linkedHotButtons: HotButtonData[] = [];
-
   const handleSelectColor = (color: number) => {
     dispatch({ type: "SET_COLOR", payload: color.toString() });
   };
@@ -147,19 +234,113 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
     }
   };
 
-  onLinkedHotButtons(
-    buttonLoc,
-    (button: HotButtonLoc, suffix: string) => {
-      linkedHotButtons.push({ hotButtonLoc: button, suffix: suffix });
-    },
-    iniData
-  );
+  const handleHotButtonListClick = (hotButtonLoc: HotButtonLoc) => {
+    setSelectedBar(hotButtonLoc.barNum);
+    setSelectedPage(hotButtonLoc.pageNum);
+    setAllowOverwrite(false);
+  };
+
+  const handleAssignToHotButton = (buttonNum: number) => {
+    const assignmentValue = "E" + pageButtonToHotButtonIndex(buttonLoc);
+    const targetKey = pageButtonToKeyPrefix({
+      pageNum: selectedPage,
+      buttonNum: buttonNum,
+    });
+    const barKey = hotBarToKey(selectedBar);
+    const slotKey = `${selectedBar}:${selectedPage}:${buttonNum}`;
+
+    if (!(barKey in iniData)) {
+      iniData[barKey] = {};
+    }
+
+    const existingValue =
+      targetKey in iniData[barKey] ? iniData[barKey][targetKey] : "";
+    const trimmedExistingValue = (existingValue ?? "").trim();
+    const isCurrentAssignment = trimmedExistingValue === assignmentValue;
+
+    if (isCurrentAssignment) {
+      const originalValue = originalHotButtonAssignments[slotKey] ?? "";
+      iniData[barKey][targetKey] = originalValue;
+      setOriginalHotButtonAssignments((currentAssignments) => {
+        const nextAssignments = { ...currentAssignments };
+        delete nextAssignments[slotKey];
+        return nextAssignments;
+      });
+      refreshLinkedHotButtons();
+      return;
+    }
+
+    if (
+      trimmedExistingValue &&
+      trimmedExistingValue !== assignmentValue &&
+      !allowOverwrite
+    ) {
+      alert(
+        "That hot button is already assigned. Check \"Allow overwrite\" to replace it."
+      );
+      return;
+    }
+
+    setOriginalHotButtonAssignments((currentAssignments) => ({
+      ...currentAssignments,
+      [slotKey]: trimmedExistingValue,
+    }));
+
+    iniData[barKey][targetKey] = assignmentValue;
+    refreshLinkedHotButtons();
+  };
+
+  const handleClearHotButton = (buttonNum: number) => {
+    const targetKey = pageButtonToKeyPrefix({
+      pageNum: selectedPage,
+      buttonNum,
+    });
+    const barKey = hotBarToKey(selectedBar);
+
+    if (barKey in iniData && targetKey in iniData[barKey]) {
+      delete iniData[barKey][targetKey];
+    }
+
+    setOriginalHotButtonAssignments((currentAssignments) => {
+      const nextAssignments = { ...currentAssignments };
+      delete nextAssignments[`${selectedBar}:${selectedPage}:${buttonNum}`];
+      return nextAssignments;
+    });
+    refreshLinkedHotButtons();
+  };
 
   const color: string = socialButtonData.color
     ? colors[parseInt(socialButtonData.color)]
     : colors[0];
 
-  // console.log("color: " + color);
+  const hotButtonPageValues = hotButtonNumbers.map((buttonNum) => {
+    const hotButtonKey = pageButtonToKeyPrefix({
+      pageNum: selectedPage,
+      buttonNum: buttonNum,
+    });
+    const barKey = hotBarToKey(selectedBar);
+    const value =
+      barKey in iniData && hotButtonKey in iniData[barKey]
+        ? iniData[barKey][hotButtonKey]
+        : "";
+
+    const display = hotButtonDisplayValue(value, iniData);
+
+    const trimmedValue = (value ?? "").trim();
+
+    return {
+      buttonNum,
+      value,
+      displayText: display.text,
+      isOccupied: display.isOccupied,
+      textColor: display.textColor,
+      isCurrentAssignment: trimmedValue === "E" + pageButtonToHotButtonIndex(buttonLoc),
+      isOccupiedByOtherAssignment:
+        trimmedValue !== "" &&
+        trimmedValue !== "E" + pageButtonToHotButtonIndex(buttonLoc),
+    };
+  });
+
   return (
     <Modal
       show={showModal}
@@ -177,8 +358,8 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
       </Modal.Header>
       <Modal.Body>
         <Form>
-          <Row sm="auto">
-            <Col>
+          <Row className="g-3">
+            <Col lg={7}>
               <Row sm="auto">
                 <Col md={3}>
                   <ColorSelector onSelectColor={handleSelectColor} />
@@ -203,7 +384,7 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
                 onChange={handleTextareaChange}
               />
             </Col>
-            <Col>
+            <Col lg={5}>
               <Table bordered hover striped size="sm">
                 <thead className="text-center">
                   <tr key="hbh1">
@@ -227,7 +408,11 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
                   )}
                   {linkedHotButtons.length > 0 &&
                     linkedHotButtons.map((hotButton, idx) => (
-                      <tr key={"hbbr" + idx}>
+                      <tr
+                        key={"hbbr" + idx}
+                        onClick={() => handleHotButtonListClick(hotButton.hotButtonLoc)}
+                        style={{ cursor: "pointer" }}
+                      >
                         <td key={"hbbd-bar" + idx}>
                           {hotButton.hotButtonLoc.barNum}
                         </td>
@@ -241,6 +426,115 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
                     ))}
                 </tbody>
               </Table>
+            </Col>
+          </Row>
+
+          <Row className="mt-4">
+            <Col xs={12}>
+              <div className="mb-3">
+                <Form.Group as={Row} className="align-items-center g-2">
+                  <Form.Label column sm="auto">
+                    Bar
+                  </Form.Label>
+                  <Col sm={2}>
+                    <Form.Select
+                      value={selectedBar}
+                      onChange={(event) => setSelectedBar(Number(event.target.value))}
+                    >
+                      {hotBarNumbers.map((barNum) => (
+                        <option key={barNum} value={barNum}>
+                          {barNum}
+                        </option>
+                      ))}
+                    </Form.Select>
+                  </Col>
+
+                  <Form.Label column sm="auto">
+                    Page
+                  </Form.Label>
+                  <Col sm={2}>
+                    <Form.Select
+                      value={selectedPage}
+                      onChange={(event) => setSelectedPage(Number(event.target.value))}
+                    >
+                      {hotPageNumbers.map((pageNum) => (
+                        <option key={pageNum} value={pageNum}>
+                          {pageNum}
+                        </option>
+                      ))}
+                    </Form.Select>
+                  </Col>
+                </Form.Group>
+              </div>
+
+              <Form.Check
+                type="checkbox"
+                label="Allow overwrite"
+                checked={allowOverwrite}
+                onChange={(event) => setAllowOverwrite(event.target.checked)}
+                className="mb-3"
+              />
+
+              <div
+                className="d-grid gap-2"
+                style={{ gridTemplateColumns: "repeat(6, 90px)" }}
+              >
+                {hotButtonPageValues.map(
+                  ({
+                    buttonNum,
+                    displayText,
+                    isCurrentAssignment,
+                    isOccupiedByOtherAssignment,
+                    isOccupied,
+                    textColor,
+                  }) => (
+                    <div
+                      key={buttonNum}
+                      className="d-flex flex-column align-items-center gap-1"
+                      style={{ width: "90px" }}
+                    >
+                      <Button
+                        size="sm"
+                        variant="outline-secondary"
+                        disabled={isOccupiedByOtherAssignment && !allowOverwrite}
+                        onClick={() => handleAssignToHotButton(buttonNum)}
+                        title={displayText || "empty"}
+                        style={{
+                          width: "90px",
+                          height: "90px",
+                          minWidth: "90px",
+                          minHeight: "90px",
+                          padding: "6px",
+                          borderWidth: isCurrentAssignment ? "2px" : "1px",
+                          fontWeight: isCurrentAssignment ? 700 : 400,
+                          whiteSpace: "normal",
+                          wordBreak: "break-word",
+                          overflow: "hidden",
+                          lineHeight: 1.2,
+                          color: textColor,
+                        }}
+                      >
+                        {isOccupied ? (
+                          <i style={{ color: textColor }}>{displayText}</i>
+                        ) : displayText ? (
+                          displayText
+                        ) : (
+                          "empty"
+                        )}
+                      </Button>
+                      <Button
+                        size="sm"
+                        variant="outline-danger"
+                        onClick={() => handleClearHotButton(buttonNum)}
+                        title={`Clear hot button ${buttonNum}`}
+                        style={{ width: "90px" }}
+                      >
+                        Clear
+                      </Button>
+                    </div>
+                  )
+                )}
+              </div>
             </Col>
           </Row>
         </Form>

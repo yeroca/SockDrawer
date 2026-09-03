@@ -99,7 +99,7 @@ const Usage = () => {
             expect to change this behavior in the future.
           </li>
         </ul>
-        <h4>Known issues in version 1.2</h4>
+        <h4>Known issues in version 1.2+</h4>
         <ul>
           <li key="kir_li3">
             After loading a{" "}
