@@ -187,9 +187,10 @@ const Home: React.FC<HomeProps> = ({
 
   const handleClickAccept = (
     buttonLoc: SocialButtonLoc,
-    socialButtonData: SocialButtonData
+    socialButtonData: SocialButtonData,
+    draftIniData: IniData
   ): void => {
-    const newIniData = copyIniData(iniData);
+    const newIniData = copyIniData(draftIniData);
     storeSocialButtonData(buttonLoc, socialButtonData, newIniData);
     setIniData(newIniData);
   };

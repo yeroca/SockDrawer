@@ -19,6 +19,7 @@ import { colors } from "../utils/colors";
 import { altActName } from "../utils/altAct";
 import PasteJSONBox from "./PasteJSONBox";
 import CopyButton from "./CopyButton";
+import copyIniData from "../utils/copyIniData";
 import {
   pageButtonToColorKey,
   pageButtonToHotButtonIndex,
@@ -99,7 +100,8 @@ interface SocialButtonEditorProps {
   onHide: () => void;
   onClickAccept: (
     buttonLoc: SocialButtonLoc,
-    socialButtonData: SocialButtonData
+    socialButtonData: SocialButtonData,
+    draftIniData: IniData
   ) => void;
 }
 
@@ -122,22 +124,15 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
   const [allowOverwrite, setAllowOverwrite] = useState<boolean>(false);
   const [originalHotButtonAssignments, setOriginalHotButtonAssignments] =
     useState<Record<string, string>>({});
-
-  const refreshLinkedHotButtons = useCallback(() => {
-    const nextLinkedHotButtons: HotButtonData[] = [];
-    onLinkedHotButtons(
-      buttonLoc,
-      (button: HotButtonLoc, suffix: string) => {
-        nextLinkedHotButtons.push({ hotButtonLoc: button, suffix });
-      },
-      iniData
-    );
-    setLinkedHotButtons(nextLinkedHotButtons);
-  }, [buttonLoc, iniData]);
+  const [draftIniData, setDraftIniData] = useState<IniData>(() =>
+    copyIniData(iniData)
+  );
 
   useEffect(() => {
     // Load initial data from loadSocialButtonData when component mounts
     const initialData = loadSocialButtonData(buttonLoc, iniData);
+    const initialDraftIniData = copyIniData(iniData);
+    setDraftIniData(initialDraftIniData);
     dispatch({ type: "SET_NAME", payload: initialData.name });
     dispatch({ type: "SET_COLOR", payload: initialData.color });
     dispatch({ type: "SET_LINES", payload: initialData.lines });
@@ -148,7 +143,7 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
       (button: HotButtonLoc, suffix: string) => {
         nextLinkedHotButtons.push({ hotButtonLoc: button, suffix });
       },
-      iniData
+      initialDraftIniData
     );
 
     if (nextLinkedHotButtons.length > 0) {
@@ -162,7 +157,7 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
     setLinkedHotButtons(nextLinkedHotButtons);
     setOriginalHotButtonAssignments({});
     setAllowOverwrite(false);
-  }, [buttonLoc, showModal]);
+  }, [buttonLoc, iniData, showModal]);
 
   // Memoized callbacks to update the corresponding state properties
   const handleNameChange = useCallback((newValue: string) => {
@@ -180,7 +175,7 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
   };
 
   const handleClickAccept = () => {
-    onClickAccept(buttonLoc, socialButtonData);
+    onClickAccept(buttonLoc, socialButtonData, draftIniData);
     setShowModal(false);
   };
 
@@ -249,24 +244,35 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
     const barKey = hotBarToKey(selectedBar);
     const slotKey = `${selectedBar}:${selectedPage}:${buttonNum}`;
 
-    if (!(barKey in iniData)) {
-      iniData[barKey] = {};
+    const nextDraftIniData = copyIniData(draftIniData);
+    if (!(barKey in nextDraftIniData)) {
+      nextDraftIniData[barKey] = {};
     }
 
     const existingValue =
-      targetKey in iniData[barKey] ? iniData[barKey][targetKey] : "";
+      targetKey in nextDraftIniData[barKey]
+        ? nextDraftIniData[barKey][targetKey]
+        : "";
     const trimmedExistingValue = (existingValue ?? "").trim();
     const isCurrentAssignment = trimmedExistingValue === assignmentValue;
 
     if (isCurrentAssignment) {
       const originalValue = originalHotButtonAssignments[slotKey] ?? "";
-      iniData[barKey][targetKey] = originalValue;
+      nextDraftIniData[barKey][targetKey] = originalValue;
+      setDraftIniData(nextDraftIniData);
       setOriginalHotButtonAssignments((currentAssignments) => {
         const nextAssignments = { ...currentAssignments };
         delete nextAssignments[slotKey];
         return nextAssignments;
       });
-      refreshLinkedHotButtons();
+      setLinkedHotButtons([]);
+      onLinkedHotButtons(
+        buttonLoc,
+        (button: HotButtonLoc, suffix: string) => {
+          setLinkedHotButtons((current) => [...current, { hotButtonLoc: button, suffix }]);
+        },
+        nextDraftIniData
+      );
       return;
     }
 
@@ -286,8 +292,16 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
       [slotKey]: trimmedExistingValue,
     }));
 
-    iniData[barKey][targetKey] = assignmentValue;
-    refreshLinkedHotButtons();
+    nextDraftIniData[barKey][targetKey] = assignmentValue;
+    setDraftIniData(nextDraftIniData);
+    setLinkedHotButtons([]);
+    onLinkedHotButtons(
+      buttonLoc,
+      (button: HotButtonLoc, suffix: string) => {
+        setLinkedHotButtons((current) => [...current, { hotButtonLoc: button, suffix }]);
+      },
+      nextDraftIniData
+    );
   };
 
   const handleClearHotButton = (buttonNum: number) => {
@@ -297,16 +311,25 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
     });
     const barKey = hotBarToKey(selectedBar);
 
-    if (barKey in iniData && targetKey in iniData[barKey]) {
-      delete iniData[barKey][targetKey];
+    const nextDraftIniData = copyIniData(draftIniData);
+    if (barKey in nextDraftIniData && targetKey in nextDraftIniData[barKey]) {
+      delete nextDraftIniData[barKey][targetKey];
     }
+    setDraftIniData(nextDraftIniData);
 
     setOriginalHotButtonAssignments((currentAssignments) => {
       const nextAssignments = { ...currentAssignments };
       delete nextAssignments[`${selectedBar}:${selectedPage}:${buttonNum}`];
       return nextAssignments;
     });
-    refreshLinkedHotButtons();
+    setLinkedHotButtons([]);
+    onLinkedHotButtons(
+      buttonLoc,
+      (button: HotButtonLoc, suffix: string) => {
+        setLinkedHotButtons((current) => [...current, { hotButtonLoc: button, suffix }]);
+      },
+      nextDraftIniData
+    );
   };
 
   const color: string = socialButtonData.color
@@ -320,11 +343,11 @@ const SocialButtonEditor: React.FC<SocialButtonEditorProps> = ({
     });
     const barKey = hotBarToKey(selectedBar);
     const value =
-      barKey in iniData && hotButtonKey in iniData[barKey]
-        ? iniData[barKey][hotButtonKey]
+      barKey in draftIniData && hotButtonKey in draftIniData[barKey]
+        ? draftIniData[barKey][hotButtonKey]
         : "";
 
-    const display = hotButtonDisplayValue(value, iniData);
+    const display = hotButtonDisplayValue(value, draftIniData);
 
     const trimmedValue = (value ?? "").trim();
 
