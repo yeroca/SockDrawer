@@ -1,0 +1,437 @@
+1	Innate Eminence	This passive ability increases your your strength, stamina, agility, dexterity, wisdom, intelligence, and charisma by 2 points.	7
+29	Innate Regeneration	This passive ability increases your health regeneration by 1 point.	1
+8	Innate Spell Resistance	This passive ability improves your cold, disease, fire, magic, and poison resistances by 2 points.	5
+13	Innate Run Speed	"This passive ability increases your base run speed by 8%.
+This modification does not stack with movement speed spell effects."	1
+15	Innate Metabolism	This passive ability reduces your food and drink consumption by 110%.	1
+16	Innate Lung Capacity	This passive ability increases the amount of air you can hold in your lungs by 10%.	1
+32	Finishing Blow	This passive ability grants your critical melee attacks a 50% chance to deal 16000 damage to level 50 and lower NPC targets with 10% or less health.	2
+33	Combat Stability	"This passive ability increases the armor class soft cap of your class by 2%.
+The armor class soft cap is the amount of armor class that functions at 100% effectiveness. Armor class gains in excess of this cap are reduced in effectiveness by a percentage based on your class and level."	2
+34	Combat Agility	"This passive ability increases your melee avoidance by 2%.
+Melee avoidance is the component of armor class that allows you to avoid incoming attacks and is derived from agility, item avoidance and your defense skill."	2
+81	Ambidexterity	This passive ability increases your chance to successfully dual wield by 32%.	9
+104	Double Riposte	This passive ability grants you a 5% chance to perform a double riposte.	3
+109	Rampage	This ability, when activated, performs a single primary slot combat round on all creatures within a 40 foot radius.	5
+110	Area Taunt	Area Taunt I, when activated, taunts all creatures within a 40 foot radius, placing you 100 points of hate higher than your opponents' previously most hated target.	5
+111	War Cry	War Cry I, when activated, grants all group members within a 100 foot radius immunity to fear spells for 10 seconds.	3
+120	Physical Enhancement	This passive ability increases your melee avoidance by 2% and your armor class soft cap by 2%.	3
+112	First Aid	This passive ability increases the maximum health you can bind wound to 80%.	1
+141	New Tanaan Crafting Mastery	"Training with the sages and merchants of New Tanaan gives adventurers the chance to hone their crafting skills.
+This passive ability allows you to raise 1 additional standard tradeskill (Baking, Blacksmithing, Brewing, Fletching, Jewelcraft, Pottery, or Tailoring) from its initial Specialization cap of 200 up to 300."	3
+142	Planar Power	This passive ability increases the maximum that your strength, stamina, agility, dexterity, wisdom, intelligence, and charisma can be raised to by 5 points.	2
+197	Living Shield	This passive ability extends the duration of your /shield ability by 12 seconds.	2
+210	Ingenuity	This passive ability increases the chance your direct damage and damage-over-time spells will deal critical damage by 3%.	1
+213	Strikethrough	This passive ability increases the chance you will strike through your opponent's active defenses, such as dodge, block, parry, and riposte by 15%.	2
+222	Stalwart Endurance	This passive ability grants you a 25% chance to endure what would otherwise be a stunning melee attack, from any angle, without being stunned.	2
+233	Packrat	This passive ability reduces the weight of your inventory by 3%.	3
+234	Heightened Endurance	This passive ability increases your endurance regeneration by 1 point.	3
+235	Weapon Affinity	This passive ability increases the chance that your weapon's magical effects will trigger during melee combat by 10%.	5
+299	Sturdiness	This passive ability increases your maximum health by 100 points.	5
+300	Warlord's Tenacity	Warlord's Tenacity I, when activated, heals you for 567 health and increases your maximum health by 500 points for  0:01:06.	3
+301	Strengthened Strike	This passive ability increases the minimum damage of your Kick and Bash (or Slam) attacks by 5 points.	3
+302	Reaching Shielding	This passive ability extends the range of your /shield ability by 2 feet.	3
+309	Combat Fury	This passive ability increases your chance of performing a critical melee hit with all skills by 15%.	2
+324	Blacksmithing Mastery	This passive ability reduces the chance of failing Blacksmithing recipes by 10%.	3
+325	Baking Mastery	This passive ability reduces the chance of failing Baking recipes by 10%.	3
+326	Brewing Mastery	This passive ability reduces the chance of failing Brewing recipes by 10%.	3
+327	Fletching Mastery	This passive ability reduces the chance of failing Fletching recipes by 10%.	3
+328	Pottery Mastery	This passive ability reduces the chance of failing Pottery recipes by 10%.	3
+329	Tailoring Mastery	This passive ability reduces the chance of failing Tailoring recipes by 10%.	3
+330	Salvage	This passive ability grants you a 5% chance to recover an item that would otherwise be lost on a failed tradeskill combine.	5
+331	Origin	"This ability, when activated, transports you back to your starting city.
+You can check your origin location using the command /charinfo."	0
+333	Discordant Defiance	This passive ability raises the maximum that your cold, disease, fire, magic, and poison resistances can be increased to with items and spells by 5 points.	5
+466	Trials of Mata Muram	"This passive ability increases your resistance to magic, cold, fire, disease and poison by 8 points.
+
+Complete the Trials of Mata Muram in Muramite Proving Grounds to progress this ability."	0
+334	Mystical Attuning	This passive ability increases the number of mystical effects that can affect you at once by 1.	5
+335	Delay Death	This passive ability increases the amount of damage you can take before dying after falling unconscious at 0 health by 50 points.	3
+341	Veteran's Wrath	"This passive ability increases the damage of your critical melee attacks by 15%.
+This bonus applies to the 7 standard weapon skills."	3
+783	Energetic Attunement	This passive ability increases the maximum that your health regeneration can be increased with items by 1 point.	5
+930	Fear Resistance	This passive ability grants you an additional 5% chance to resist most fear spells and increases the chance of breaking fear earlier.	2
+435	Shield Block	This passive ability grants you a 1% chance to block incoming melee attacks with your shield.	3
+467	Press the Attack	This ability, when activated, pushes your target backwards and deals 1 damage.	5
+471	Gift of the Nest	Your devotion to the Nest increases your total and maximum strength, stamina, agility, dexterity, wisdom, intelligence, and charisma by 10 points.	0
+481	Lesson of the Devoted	Lesson of the Devoted, when activated, increases the amount of experience you gain by 100% for  0:30:00.	0
+482	Infusion of the Faithful	Infusion of the Faithful, when activated, increases your strength, stamina, agility, dexterity, wisdom, intelligence, charisma, your resistance to magic, cold, fire, disease and poison by 1000 points, and your movement speed by 65% for  0:15:00.	0
+483	Chaotic Jester	"Chaotic Jester, when activated, summons a jester from Bristlebane's court that spreads mirth for up to 15 minutes or until you zone.
+The Jester will perform one of the following acts every 30 to 60 seconds on one lucky adventurer within 150 feet:
+Bristlebane's Gift - Instantly restores 500000 health.
+
+Bristlebane's Surprise - Instantly restores 500000 mana and endurance.
+
+Bristlebane's Diminution - Shrinks the target down to 3 feet tall.
+
+Bristlebane's Expansion - Grows the target up to 9 feet tall.
+
+Bristlebane's Alteration - Causes the target to take the appearance of a creature found in your current zone.
+
+Bristlebane's Cornucopia - Grants the target a stack of 10 Bristlebane's Bread or Bristlebane's Wine with the potential for the food and drink to be poisoned!
+Bristlebane's Bread, when activated blesses the target with Bristlebane's Tasty Bread or curses them with Bristlebane's Tasty Bread.
+Bristlebane's Wine blesses the target with Bristlebane's Soothing Wine or curses them with Bristlebane's Soothing Wine.
+
+Bristlebane's Celebration - Performs a dazzling display of fireworks.
+
+Bristlebane's Hilarity - Shares a comical joke that all are guaranteed to enjoy."	0
+484	Expedient Recovery	Expedient Recovery, when activated, summons all of your corpses and restores 100% of the lost experience from each corpse that can still be resurrected.	0
+485	Steadfast Servant	"Steadfast Servant, when activated, summons a faithful servant that casts healing and buff spells for up to 30 minutes or until you zone.
+The servant will offer one of the following blessings every 15 to 45 seconds on one lucky adventurer within 150 feet:
+Servant's Elixir - Heals 65 to 6461 (based on your level) health every 6 seconds for  0:00:24.
+
+Servant's Clarity - Increases the target's maximum mana by 25 to 1682 points, intelligence and wisdom by 5 to 126 points, and mana regeneration by 6 to 100 points (based on your level) for  0:15:00.
+
+Servant's Armor - Increases the target's armor class by 5 to 239 points (based on your level) for  0:15:00.
+
+Servant's Haste - Increases the target's melee speed by 30 to 70% (based on your level) for  0:15:00."	0
+486	Staunch Recovery	Staunch Recovery, when activated, instantly restores 500000 health, mana, and endurance.	0
+487	Intensity of the Resolute	"Intensity of the Resolute, when activated, increases the chance your healing and damage spells will apply critically by 50% and the base damage of your melee attacks by 55% for  0:01:00.
+This ability does not stack with Glyph of Destruction."	0
+488	Curse of Blood	"A strange power courses through your blood. You sense a purpose, a desire, a secret waiting to be told.
+
+Defeat the precursors to The Demiplane of Blood to progress this ability."	0
+488	Affliction of Blood	"The curse within your blood grows stronger. A sense of foreboding plays at the back of your mind.
+
+Defeat the precursors to The Demiplane of Blood to progress this ability."	0
+322	Innate See Invis	This ability permanently enhances your vision allowing you to see the invisible.	9
+496	Essence of the Dragon	"The essence of the Kar`Zok is within you but still feels foreign.
+This passive ability grants you immunity to Gust of Atrebe and Aura of the Kar`Zok.
+
+Complete the Empires of Kunark achievement 'Essence of the Dragon I' to progress this ability."	0
+563	Concentration	"This passive ability grants you a chance to regain your concentration rather than be interrupted when activating spells from items.
+Additional ranks currently offer no further benefit."	3
+498	Enhanced Aggression	This passive ability increases the maximum amount of attack you can gain from items by 10 points.	5
+552	Call of Challenge	This ability, when activated, prevents your target from fleeing at low health for 30 seconds.	9
+574	Harmonic Dissonance	This ability, when activated, transports you to the Theater of Blood.	0
+1099	Innate Prowess	This passive ability increases the damage you deal with all forms of melee combat by 10%.	0
+692	Bold Attacks: Disabled	"This ability is DISABLED. Purchase the 0 cost rank to enable its effects.
+When enabled, this passive ability increases the amount of hate generated from your attacks and spells by 7%."	5
+692	Bold Attacks: Enabled	"This ability is ENABLED. Expend the current rank to disable its effects.
+This passive ability increases the amount of hate generated from your attacks and spells by 7%."	0
+2001	Sneering Grin: Enabled	"This ability is ENABLED. Expend the current rank to disable its effects.
+This passive ability grants your Taunt skill a chance (with a 60% bonus) to trigger Sneering Grin I which increases your target's hatred for you by 7650 points."	0
+143	Natural Durability	This passive ability increases your maximum base health (derived from your stamina) by 2%.	2
+511	Throne of Heroes	Throne of Heroes, when activated, transports you to the Throne of Heroes in the Guild Lobby.	0
+575	Tinkering Mastery	This passive ability reduces the chance of failing Tinkering recipes by 10%.	3
+576	Jewel Craft Mastery	This passive ability reduces the chance of failing Jewelcrafting recipes by 10%.	3
+582	Battle Ready	This passive ability increases the number of save slots in your bandolier window by 2.	5
+2000	Armor of Experience	"Armor of Experience I, when activated, reduces incoming melee damage in 4 phases, each lasting for 10 incoming melee hits or  0:01:30.
+Armor of Experience I absorbs 100% of incoming melee damage. 
+Armor of Experience II absorbs 75% of incoming melee damage. 
+Armor of Experience III absorbs 50% of incoming melee damage. 
+Armor of Experience IV absorbs 25% of incoming melee damage."	0
+5101	Mythic Glyph of Dragon Scales II	"Glyph of Dragon Scales II, when activated, increases your maximum base health, mana, and endurance by 20%, your base mitigation and base avoidance by 50%, protects against 35% of damage over time spells, and 35% of any direct damage spell or melee damage that exceeds 800 points per hit for  0:05:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 70 and 84 after which aditional tiers become available."	25
+5200	Mythic Glyph of Arcane Secrets I	"Glyph of Arcane Secrets I, when activated, reduces the mana cost of your level 69 and lower spells by 1% to 20% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 65 and 69 after which aditional tiers become available."	20
+5102	Mythic Glyph of Dragon Scales III	"Glyph of Dragon Scales III, when activated, increases your maximum base health, mana, and endurance by 20%, your base mitigation and base avoidance by 50%, protects against 35% of damage over time spells, and 35% of any direct damage spell or melee damage that exceeds 2500 points per hit for  0:05:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 85 and 99 after which aditional tiers become available."	30
+5302	Mythic Glyph of Ultimate Power III	"Glyph of Ultimate Power III, when activated, increases the base damage of your melee hits by 15%, the critical damage of your melee hits by 60% (non-cumulative), the critical chance of your pet's melee hits by 15%, the critical damage of your pet's melee hits by 60%, the critical chance of your damage spells by 15%, the critical damage of your damage spells by 60%, and the critical chance of your healing spells by 17% for  0:02:00.
+This buff persists through death.
+This buff does not stack with Intensity of the Resolute.
+This ability must be repurchased after use and is effective between levels 85 and 99 after which aditional tiers become available."	30
+733	Killing Spree	This passive ability grants your killing blows against non-trivial enemies a 10% chance to trigger Killing Spree I which instantly restores 200 endurance and increases your base melee damage by 30% for  0:00:30.	3
+734	Improved Recovery	This passive ability increases the effectiveness of incoming instant duration healing spells by 2%.	9
+601	Grappling Strike	This ability, when activated, pulls your target toward you and deals 1 point of damage.	5
+605	Weapon Mastery of the Warlord	"This passive ability improves your melee combat effectiveness.
+Increases the base damage of weapons that you wield by 5%."	5
+606	Mark of the Mage Hunter	Mark of the Mage Hunter I, when activated, absorbs 25% of incoming direct spell damage up to 1000 damage per hit up to 5000 total damage for  0:03:00.	9
+611	Battle Leap	Battle Leap I, when activated, causes you to leap approximately 10 feet in front of your target and blesses you with Battle Leap Warcry I, which increases your base melee damage by 20% for  0:00:06.	9
+182	Summon Personal Tribute Master	Summon Tribute Master, when activated, summons a personal tribute master that allows donations for favor or modifications to your current benefits for up to 10 minutes or until you zone.	0
+1115	Mystical Shield	This passive ability grants you a 5% chance to completely resist incoming detrimental spells.	9
+590	Breath of Atathus	Grants you the ability to call upon your dragon bloodline to unleash a breath attack upon your foes, damaging them and reducing their resistance to fire.	0
+591	Breath of Draton'ra	Grants you the ability to call upon your dragon bloodline to unleash a breath attack upon your foes, damaging them and reducing their resistance to disease.	0
+592	Breath of Osh'vir	Grants you the ability to call upon your dragon bloodline to unleash a breath attack upon your foes, damaging them and reducing their resistance to magic.	0
+593	Breath of Venesh	Grants you the ability to call upon your dragon bloodline to unleash a breath attack upon your foes, damaging them and reducing their resistance to poison.	0
+594	Breath of Mysaphar	Grants you the ability to call upon your dragon bloodline to unleash a breath attack upon your foes, damaging them and reducing their resistance to cold.	0
+595	Breath of Keikolin	Grants you the ability to call upon your dragon bloodline to unleash a breath attack upon your foes, damaging them and slightly reducing their resistance to all magic.	0
+3801	General Sturdiness	This passive ability increases your maximum health by 100 points.	6
+3646	Blast of Anger	Blast of Anger I, when activated, instantly increases your target's hatred for you by 3000 points.	7
+3731	Infused by Rage	This passive ability grants your melee attacks a chance to trigger Infusion of Rage I, which increases your target's hatred for you by 500 points.	6
+3732	Gut Punch	Gut Punch I, when activated, increases your target's hatred for you by 250 points then reduces their accuracy by 50% for  0:00:06.	7
+3733	Battlefield Vengeance	This passive ability increases your chance to riposte incoming attacks by 1% and grants a 20% chance to kick when performing a riposte.	6
+3899	Furious Leap	This ability, when activated, instantly teleports you up to 234 feet forward.	3
+3823	Warlord's Deadly Aim	This passive ability increases the accuracy of your archery attacks by 5 points.	6
+800	Vehement Rage	This ability, when activated, increases your base melee damage by 15% and raises the minimum base damage of your melee hits to be 20 but reduces the effectiveness of incoming instant-duration healing spells by 25% for 36 seconds.	9
+801	Knee Strike	Knee Strike I, when activated, strikes your target with a Kick skill attack with a base damage of 75 and reduces their avoidance by 18% for  0:00:18.	2
+802	Hastened Fortitude Discipline	This passive ability reduces the reuse time of your Fortitude Discipline by 2 minutes.	2
+803	Hastened Furious Discipline	This passive ability reduces the reuse time of your Furious Discipline by 2 minutes.	2
+804	Warlord's Bravery	Warlord's Bravery I, when activated, reduces incoming melee damage by 5% for 15 hits for  0:00:24.	6
+5300	Mythic Glyph of Ultimate Power I	"Glyph of Ultimate Power I, when activated, increases the base damage of your melee hits by 15%, the critical damage of your melee hits by 20% (non-cumulative), the critical chance of your pet's melee hits by 15%, the critical damage of your pet's melee hits by 20%, the critical chance of your damage spells by 15%, the critical damage of your damage spells by 20%, and the critical chance of your healing spells by 15% for  0:02:00.
+This buff persists through death.
+This buff does not stack with Intensity of the Resolute.
+This ability must be repurchased after use and is effective between levels 65 and 69 after which aditional tiers become available."	20
+5100	Mythic Glyph of Dragon Scales I	"Glyph of Dragon Scales I, when activated, increases your maximum base health, mana, and endurance by 20%, your base mitigation and base avoidance by 50%, protects against 35% of damage over time spells, and 35% of any direct damage spell or melee damage that exceeds 500 points per hit for  0:05:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 65 and 69 after which aditional tiers become available."	20
+5301	Mythic Glyph of Ultimate Power II	"Glyph of Ultimate Power II, when activated, increases the base damage of your melee hits by 15%, the critical damage of your melee hits by 40% (non-cumulative), the critical chance of your pet's melee hits by 15%, the critical damage of your pet's melee hits by 40%, the critical chance of your damage spells by 15%, the critical damage of your damage spells by 40%, and the critical chance of your healing spells by 16% for  0:02:00.
+This buff persists through death.
+This buff does not stack with Intensity of the Resolute.
+This ability must be repurchased after use and is effective between levels 70 and 84 after which aditional tiers become available."	25
+5400	Mythic Glyph of Inspired Provocation I	"Glyph of Inspired Provocation I, when activated, increases the hatred generated by your spells and combat abilities by 25% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 65 and 69 after which aditional tiers become available."	10
+5103	Mythic Glyph of Dragon Scales IV	"Glyph of Dragon Scales IV, when activated, increases your maximum base health, mana, and endurance by 20%, your base mitigation and base avoidance by 50%, protects against 35% of damage over time spells, and 35% of any direct damage spell or melee damage that exceeds 5000 points per hit for  0:05:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 100 and 114 after which aditional tiers become available."	40
+5201	Mythic Glyph of Arcane Secrets II	"Glyph of Arcane Secrets II, when activated, reduces the mana cost of your level 84 and lower spells by 1% to 25% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 70 and 84 after which aditional tiers become available."	25
+5303	Mythic Glyph of Ultimate Power IV	"Glyph of Ultimate Power IV, when activated, increases the base damage of your melee hits by 15%, the critical damage of your melee hits by 65% (non-cumulative), the critical chance of your pet's melee hits by 15%, the critical damage of your pet's melee hits by 65%, the critical chance of your damage spells by 15%, the critical damage of your damage spells by 65%, and the critical chance of your healing spells by 18% for  0:02:00.
+This buff persists through death.
+This buff does not stack with Intensity of the Resolute.
+This ability must be repurchased after use and is effective between levels 100 and 114 after which aditional tiers become available."	40
+5203	Mythic Glyph of Arcane Secrets IV	"Glyph of Arcane Secrets IV, when activated, reduces the mana cost of your level 114 and lower spells by 1% to 35% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 100 and 114 after which aditional tiers become available."	40
+5202	Mythic Glyph of Arcane Secrets III	"Glyph of Arcane Secrets III, when activated, reduces the mana cost of your level 99 and lower spells by 1% to 30% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 85 and 99 after which aditional tiers become available."	30
+5401	Mythic Glyph of Inspired Provocation II	"Glyph of Inspired Provocation II, when activated, increases the hatred generated by your spells and combat abilities by 30% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 70 and 84 after which aditional tiers become available."	12
+5402	Mythic Glyph of Inspired Provocation III	"Glyph of Inspired Provocation III, when activated, increases the hatred generated by your spells and combat abilities by 35% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 85 and 99 after which aditional tiers become available."	15
+5403	Mythic Glyph of Inspired Provocation IV	"Glyph of Inspired Provocation IV, when activated, increases the hatred generated by your spells and combat abilities by 40% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 100 and 114 after which aditional tiers become available."	20
+5005	Foraging	This passive ability increases your Forage skill cap by 50 points.	3
+146	Veteran's Enhancement	This passive ability increases your maximum health and mana by 250 points, your attack power by 75 points, and the maximum that your health regeneration can be increased with items by 8 points.	0
+1204	Empowered Ingenuity	This passive ability increases the damage dealt by your critical direct damage and damage over time spells by 10%.	4
+1209	Hardy Endurance	This passive ability increases your maximum endurance by 50 points.	5
+1433	Extended Ingenuity	"This passive ability increases the duration of beneficial spells that you cast by 5%.
+Spells that grant invulnerability and combat abilities are exempt from this extension."	4
+1219	Armor of Wisdom	This passive ability increases your base armor class by 29 points (calculated as 7 effective armor class).	6
+130	Resplendent Glory	Resplendent Glory I, when activated, increases the effectiveness of incoming healing spells by 1 to 3% for  0:01:00.	5
+131	Rage of Rallos Zek	This ability, when activated, grants a 100% chance that your weapon's magical effects will trigger during melee combat for 12 seconds.	12
+8081	Summon Resupply Agent	Summon Resupply Agent, when activated, summons a mechanical merchant familiar that offers an array of standard spell reagents for up to 10 minutes.	0
+8130	Summon Clockwork Banker	Summon Clockwork Banker, when activated, summons a mechanical banker familiar for up to 10 minutes.	0
+453	Summon Permutation Peddler	Summon Distiller Vendor, when activated, summons a mechanical merchant that sells augmentation distillers for up to 10 minutes or until you zone.	0
+600	Blessing of the Devoted	"This passive ability reduces the reuse time of the following abilities by 25%:
+Lesson of the Devoted
+Infusion of the Faithful
+Chaotic Jester
+Expedient Recovery
+Steadfast Servant
+Staunch Recovery
+Intensity of the Resolute
+Throne of Heroes
+Armor of Experience I
+Summon Resupply Agent
+Summon Clockwork Banker
+Summon Distiller Vendor
+Summon Tribute Master"	0
+1400	Spire of the Warlord	"Spire of the Warlord I, when activated, increases your combat prowess for  0:01:30. As a passive effect, this ability increases your maximum health by 10 points and your maximum strength by 1 points.
+Grants you a chance (with a 100% bonus) to trigger Warlord's Weakening I on attackers when struck in melee combat."	6
+3213	Projection of Fury	"Projection of Fury I, when activated, summons a level 85 Doppelganger that generates 20000 points of hate, then 5000 points of hate every 5 seconds for 15 seconds.
+If your Doppelganger survives for 15 seconds, all hatred it has generated in your target will be transferred to you."	12
+10367	Ageless Enmity	Ageless Enmity I, when activated, taunts your target, placing you 500 points of hate higher than their previously most hated target.	12
+911	Warlord's Resurgence	Warlord's Resurgence I, when activated, increases your health regeneration by 300 points for  0:03:00.	12
+688	Warlord's Fury	"Warlord's Fury I, when activated, blesses you with Warlord's Greater Fury I and increases your target's hatred for you by 5000 points.
+Warlord's Greater Fury I increases the hatred you generate with all actions by 80% for  0:00:18 then blesses you with Warlord's Lesser Fury I after fading.
+Warlord's Lesser Fury I increases the amount of hate generated from your combat abilities and triggered spells by 25% for  0:00:30."	12
+9600	Hastened Taunt	This passive ability reduces the reuse time of your taunt skill by 1 second.	6
+9601	Extended Shield Reflect	This passive ability extends the duration of your Shield Reflect combat ability by 6 seconds.	6
+9602	Extended Commanding Voice	This passive ability extends the duration of your Commanding Voice combat ability by 6 seconds.	6
+1021	Adamant Will	This passive ability grants you an additional 1% chance to resist charm spells.	5
+1664	Twinproc	This passive ability grants a 3% chance to twincast detrimental combat-activated instant spells triggered from your items, buffs, and alternate abilities.	7
+744	Howl of the Warlord	"This ability, when activated, allows you to escape combat from NPCs that are 5 or fewer levels higher than you, causes you to be the last possible target of rampage attacks from any current attacker, and triggers Evader's Temporary Sanctuary, which causes you to be the last target of any aggressor for 1 minute. Any hostile action or use a beneficial spell on a target other than yourself breaks this effect.
+This ability consumes 8% of your endurance to activate."	12
+967	Blade Guardian	"This ability, when activated, places you under the protection of Blade Guardian I for 3 minutes.
+Blade Guardian I triggers Blade Whirl I if your health drops below 40% which increases your ability to parry incoming attacks by 50% for 18 seconds."	9
+586	Glyph of Fireworks I	This ability, when activated, expends your energy to unleash a magnificent shower of light. You're so cool!	25
+1680	Hastened Flash of Anger	This passive ability reduces the reuse time of all combat abilities in the Flash of Anger line by 24 seconds.	10
+1681	Hastened Bazu Roar	This passive ability reduces the reuse time of all combat abilities in the Bazu Roar line by 3 seconds.	10
+1682	Hastened Scowl	This passive ability reduces the reuse time of all combat abilities in the Provoke line by 3 seconds.	12
+1686	Brace For Impact	"Brace For Impact I, when activated, grants you a chance (with a 300% bonus) to trigger Impact Guard I on yourself when struck in melee combat up to 20 times for  0:10:00.
+Impact Guard I absorbs 6% of incoming melee damage up to 30000 total damage for 12 hits for  0:00:12."	12
+929	Combatant's Pact	This passive ability increases the base healing of all the spells in the Promised Renewal or the Promised Reknit lines by 5%.	12
+704	Hero's Barracks	"This passive ability grants you the ability to conscript 1 additional mercenary.
+
+Complete the Veil of Alaris achievement 'Master of Alaris' or the task 'Mercenary Recruitment' to progress this ability."	0
+15073	Banestrike	"This passive ability improves the base damage of your melee attacks and the power of your damaging and healing abilities by 2%.
+
+Complete Slayer achievements to progress this ability."	0
+2001	Sneering Grin: Disabled	"This ability is DISABLED. Purchase the 0 cost rank to enable its effects.
+When enabled, this passive ability grants your Taunt skill a chance (with a 60% bonus) to trigger Sneering Grin I which increases your target's hatred for you by 7650 points."	5
+2002	Warlord's Grasp	Warlord's Grasp Taunt I, when activated, increases your target's hatred for you by 3000 points then applies Warlord's Grasp I, which gravitates a creature that is 3 or fewer levels higher than you, towards you, from up to 45 feet away for  0:00:06.	12
+2005	Hastened Undivided Attention	This passive ability reduces the reuse time of all combat abilities in the Undivided Attention line by 60 seconds.	15
+2007	Wars Sheol's Heroic Blade	Heroic Blade I, when activated, channels the relentlessness of Wars Sheol to strike your target with three 2H Slashing skill attacks with base damages of 2373, 2505, and 2720 points then blesses you with Heroic Rage I which increases your melee speed by 68%, the chance your melee attacks will deal critical damage by 35%, and the damage of your critical melee attacks by 150% for  0:01:00.	12
+2009	Hastened Barbed Tongue	This passive ability reduces the reuse time of all combat abilities in the Barbed Tongue Discipline line by 120 seconds.	9
+2010	Improved Shield Topple	This passive ability reduces the reuse time of all combat abilities in the Shield Break line by 1 seconds.	9
+2011	Imperator's Command	"Imperator's Command I, when activated, commands all group members within a 600 foot radius to fight harder.
+Reduces the cast time of spells with a mana cost by 20%, this effect does not exceed the standard 50% cap on spell haste.
+Increases your chance to trigger magical effects from buffs, abilities, and skills during melee combat by 1%.
+Increases maximum health by 7500 points.
+Increases attack speed by 20%.
+Increases armor class by 79 points.
+Increases mana regeneration by 300 points.
+Increases endurance regeneration by 20 points."	12
+684	Weapon Stances: Disabled	"This ability is DISABLED. Purchase the 0 cost rank to enable its effects.
+When enabled, this passive ability allows your weapon configuration to trigger a buff.
+
+Two-Handed Proficiency: Increases the damage you deal with two-handed weapons while reducing your chance to dodge or parry incoming attacks as well as your armor class.
+
+Dual-Wielding Proficiency: Increases the damage you deal with one-handed weapons, increases your chance to parry incoming attacks, increases the chance your weapon's magical effects will trigger by 20%, protects against 6% of incoming melee damage (does not stack with other defensive abilities) while reducing your chance to dodge incoming attacks.
+
+Defensive Proficiency: Equipping a shield increases your chance to block incoming attacks by 10%, increases the chance your weapon's magical effects will trigger by 20%, and protects against 12% of incoming melee damage (does not stack with other defensive abilities)."	5
+693	Crippling Fury	This passive ability increases the chance that your critical melee attacks will land as a crippling blow by 2%.	11
+694	Two-Handed Bash	This passive ability allows you to use your bash skill while wielding a two-handed weapon.	9
+730	Stunning Kick	This passive ability grants your Kick skill and Kick skill attacks a 10% chance to trigger Stunning Kick I which stuns a level 103 or lower target for 1 second.	12
+897	Glyph of Fireworks II	This ability, when activated, expends your energy to unleash a magnificent shower of light. You're the best!	100
+1054	Phalanx of Fury	This passive ability grants you a chance (with a 100% bonus) to trigger Phalanx of Fury I on attackers when struck in melee combat, which increases their hatred for you by 4500 points.	9
+1126	Gut Punch Strike: Disabled	"This ability is DISABLED. Purchase the 0 cost rank to enable its effects.
+When enabled, this passive ability causes all ranks of your Gut Punch I ability to trigger Gut Punch Strike I which deals 100 damage."	1
+1126	Gut Punch Strike: Enabled	"This ability is ENABLED. Expend the current rank to disable its effects.
+This passive ability causes all ranks of your Gut Punch I ability to trigger Gut Punch Strike I which deals 100 damage."	0
+1127	Divine Gift	"This passive ability increases your chance to score an exceptional heal by 3%.
+An exceptional heal doubles the healing value of the spell."	15
+684	Weapon Stances: Enabled	"This ability is ENABLED. Expend the current rank to disable its effects.
+This passive ability allows your weapon configuration to trigger a buff.
+
+Two-Handed Proficiency: Increases the damage you deal with two-handed weapons while reducing your chance to dodge or parry incoming attacks as well as your armor class.
+
+Dual-Wielding Proficiency: Increases the damage you deal with one-handed weapons, increases your chance to parry incoming attacks, increases the chance your weapon's magical effects will trigger by 20%, protects against 6% of incoming melee damage (does not stack with other defensive abilities) while reducing your chance to dodge incoming attacks.
+
+Defensive Proficiency: Equipping a shield increases your chance to block incoming attacks by 10%, increases the chance your weapon's magical effects will trigger by 20%, and protects against 12% of incoming melee damage (does not stack with other defensive abilities)."	0
+1179	Myrmidon's Synergy	This passive ability grants all combat abilities in the Shield Break line a 10% chance to trigger Myrmidon's Synergy I on all group members within a 60 foot radius, which absorbs up to 5000 total damage from 5 direct damage spell or melee hits for  0:00:06.	100
+139	Persistent Illusions	This passive ability allows your beneficial illusion spells to persist when zoning.	30
+2082	Extended Field Armorer	This passive ability extends the duration of all combat abilities in the Field Armorer line by 12 seconds.	6
+2083	Extended Bracing Defense	This passive ability extends the duration of all combat abilities in the Bracing Defense line by 24 seconds.	6
+2080	Hastened Offensive Disciplines	This passive ability reduces the reuse time of your Charge, Mighty Strike, Precision, Fellstrike, and Aggressive Disciplines by 1 minute.	35
+2084	Focus: Whirlwind Blade	This passive ability increases the base damage of all combat abilities in the Whirlwind Blades line by 5%.	20
+20000	Item: Disable Item Abilities	This ability, when activated, removes all Item Effect abilities you currently possess.	0
+189	Burst of Power	This passive ability increases your flurry chance (up to two extra attacks after a primary slot triple attack) by 7%.	3
+20100	Item: Firefist	"This passive ability increases your attack power by 11 points.
+
+Activate items with this effect to progress this ability."	0
+20200	Item: Lesser Expanding Mind I	"This passive ability increases your mana pool by 50 points.
+
+Activate items with this effect to progress this ability."	0
+20300	Item: Form of Defense I	"This passive ability increases your armor class by 23 points.
+
+Activate items with this effect to progress this ability."	0
+20400	Item: Form of Endurance I	"This passive ability increases your maximum hit points by 90 points.
+
+Activate items with this effect to progress this ability."	0
+20500	Item: Form of Protection I	"This passive ability increases your resistance to magic, cold, fire, disease and poison by 10 points.
+
+Activate items with this effect to progress this ability."	0
+20600	Item: Form of Rejuvenation I	"This passive ability increases your health regeneration by 4 points.
+
+Activate items with this effect to progress this ability."	0
+20700	Item: Soul Energy	"This passive ability increases your resistance to magic, cold, fire, disease, and poison by 10 points.
+
+Activate items with this effect to progress this ability."	0
+20800	Item: Savage Guard	"This passive ability increases your attack power by 25 points.
+
+Activate items with this effect to progress this ability."	0
+20900	Item: Myrmidon's Skill I	"This passive ability increases the chance of your dodge skill succeeding by 1%.
+
+Activate items with this effect to progress this ability."	0
+21000	Item: Hidden Power	"This passive ability increases your overhaste by 3% and your health regeneration by 3 points.
+
+Activate items with this effect to progress this ability."	0
+21100	Item: Trushar's Recovery	"This passive ability increases your hitpoint regeneration by 20 points while lowering your mana and endurance regeneration by 4 points.
+
+Activate items with this effect to progress this ability."	0
+21200	Item: Lunar Whispers	"This passive ability increases your mana regeneration by 2 points.
+
+Activate items with this effect to progress this ability."	0
+21300	Item: Soul Clasp	"This passive ability increases your health regeneration by 2 points and your mana regeneration by 2 points.
+
+Activate items with this effect to progress this ability."	0
+21400	Item: Aura of Battle	"This passive ability increases your hit-point regeneration by 2 and your attack power by 10 points.
+
+Activate items with this effect to progress this ability."	0
+140	Companion's Discipline	"This passive ability allows you to give commands to your temporary pets. Hotkeys for these commands can be created using the pet control window.
+Swarm and Qswarm - /pet swarm and /pet qswarm
+Commands your temporary pets to attack (or queue attacking) your current target."	30
+343	Stoicism	This passive ability reduces how far incoming melee attacks push you backward by 10%.	85
+364	Enhanced Reformation	This passive ability increases your endurance regeneration by 1 and the maximum that your endurance regeneration can be raised with items by 1.	10
+1407	Twinstrike	This passive ability grants a 1% chance to twincast skill attack combat abilities that cost at least 10 endurance.	30
+366	Combatant's Research	This passive ability reduces the chance of failing Research recipes by 10%.	5
+375	Fishing Mastery	This passive ability reduces the chance of failing Fishing recipes by 10%.	5
+21600	Item: Gnoll Reaver Fortitude	"This passive ability increases your armor class by 125 points.
+
+Activate items with this effect to progress this ability."	0
+30050	Hero's Vitality	"This passive ability increases your maximum health, mana, endurance, and the amount of damage you can take before dying after falling unconscious at 0 health by 25 points.
+
+Complete special achievements to progress this ability."	0
+30100	Hero's Fortitude	"This passive ability increases your armor class by 3 points, as well as your attack power and the maximum amount of attack power you can gain from items by 10 points.
+
+Complete special achievements to progress this ability."	0
+30150	Hero's Resolution	"This passive ability increases your total and maximum strength, stamina, agility, dexterity, wisdom, intelligence, and charisma by 5 points, your health, mana, endurance regeneration and the maximum that your health and mana regeneration can be increased with items by 2 points.
+
+Complete special achievements to progress this ability."	0
+30175	Journeyman's Speed	"This passive ability further increases your base run speed by 1%.
+This modification does not stack with movement speed spell effects.
+
+Complete explorer achievements to progress this ability."	0
+30195	Trophy Collector	"This passive ability allows you to activate 1 additional trophy.
+
+Complete special collection achievements to progress this ability."	0
+5104	Mythic Glyph of Dragon Scales V	"Glyph of Dragon Scales V, when activated, increases your maximum base health, mana, and endurance by 20%, your base mitigation and base avoidance by 50%, protects against 35% of damage over time spells, and 35% of any direct damage spell or melee damage that exceeds 7500 points per hit for  0:05:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 115 and 129 after which aditional tiers become available."	45
+5204	Mythic Glyph of Arcane Secrets V	"Glyph of Arcane Secrets V, when activated, reduces the mana cost of your level 129 and lower spells by 1% to 40% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 115 and 129 after which aditional tiers become available."	45
+5304	Mythic Glyph of Ultimate Power V	"Glyph of Ultimate Power V, when activated, increases the base damage of your melee hits by 15%, the critical damage of your melee hits by 70% (non-cumulative), the critical chance of your pet's melee hits by 15%, the critical damage of your pet's melee hits by 70%, the critical chance of your damage spells by 15%, the critical damage of your damage spells by 70%, and the critical chance of your healing spells by 19% for  0:02:00.
+This buff persists through death.
+This buff does not stack with Intensity of the Resolute.
+This ability must be repurchased after use and is effective between levels 115 and 129 after which aditional tiers become available."	45
+5404	Mythic Glyph of Inspired Provocation V	"Glyph of Inspired Provocation V, when activated, increases the hatred generated by your spells and combat abilities by 45% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 115 and 129 after which aditional tiers become available."	25
+5205	Mythic Glyph of Arcane Secrets VI	"Glyph of Arcane Secrets VI, when activated, reduces the mana cost of your level 144 and lower spells by 1% to 42% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 130 and 144 after which aditional tiers become available."	50
+5105	Mythic Glyph of Dragon Scales VI	"Glyph of Dragon Scales VI, when activated, increases your maximum base health, mana, and endurance by 20%, your base mitigation and base avoidance by 50%, protects against 35% of damage over time spells, and 35% of any direct damage spell or melee damage that exceeds 10000 points per hit for  0:02:30.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 130 and 144 after which aditional tiers become available."	50
+5405	Mythic Glyph of Inspired Provocation VI	"Glyph of Inspired Provocation VI, when activated, increases the hatred generated by your spells and combat abilities by 50% for  0:10:00.
+This buff persists through death.
+This ability must be repurchased after use and is effective between levels 130 and 144 after which aditional tiers become available."	50
+5305	Mythic Glyph of Ultimate Power VI	"Glyph of Ultimate Power VI, when activated, increases the base damage of your melee hits by 15%, the critical damage of your melee hits by 75% (non-cumulative), the critical chance of your pet's melee hits by 15%, the critical damage of your pet's melee hits by 75%, the critical chance of your damage spells by 15%, the critical damage of your damage spells by 75%, and the critical chance of your healing spells by 20% for  0:02:00.
+This buff persists through death.
+This buff does not stack with Intensity of the Resolute.
+This ability must be repurchased after use and is effective between levels 130 and 144 after which aditional tiers become available."	50
+15074	Aureate's Bane	"Aureate's Bane I, when activated, siphons power from and removes any Curse of Subjugation spell currently applied to you, improving the base damage of your melee hits by 1%, the power of your damaging and healing abilities by 2%, and the critical chance of your pet's melee hits by 1% for  0:15:00.
+
+Aureate's Bane I can ONLY be activated when a Curse of Subjugation spell is currently applied to you. Curse of Subjugation spells are commonly cast by most Aureate Invaders.
+
+Complete any The Outer Brood ""Mercenary of ..."" or ""Hunter of ..."" achievements to gain the first rank of this ability and any additional The Outer Brood ""Hunter of ..."" achievements to progress it further."	0
+15075	Wild Magic: Attunement	"When empowered by a Chaotic Storm, Wild Storm, or Disturbance the storm granted Strike spells unleashed by your melee attacks and damaging magic spells inflict 20% additional damage.
+
+Wild Storms and Disturbances are commonly found in Shattering of Ro zones.
+
+Complete any of the following Shattering of Ro quests to unlock this ability.
+Storm Chasing - from Quellious in Scarred Grove
+The Silence of Druzzil Ro - from Ao, the Fourth Born in Arcstone, Shattered Isles
+Shattered Tears: The Third Fragment - from Tsikut in Ruined Relic"	0
+10119	Faycite: Second Wind	Reduces the reuse timer of spells in the Jaxan's Jig o` Vigor group by 18.	0
+10120	Faycite: Hiatus	Reduces the reuse timer of spells in the Hiatus V group by 18.	0
+10121	Faycite: Armor of Runes	Reduces the reuse timer of spells in the Jaxan's Jig o` Vigor group by 30.	0
+10122	Faycite: Whirlwind Blades	Reduces the reuse timer of spells in the Cyclone Blades XIV group by 2.25.	0
+10123	Faycite: Provoke	Reduces the reuse timer of spells in the Provoke XIX group by 1.5.	0
+10124	Faycite: Knuckle Smash	Reduces the reuse timer of spells in the +G group by #1.	0
+10125	Faycite: Punch Through	Reduces the reuse timer of spells in the +G group by #1.	0
+10126	Faycite: Barbed Tongue Discipline	Reduces the reuse timer of spells in the Jaxan's Jig o` Vigor group by 75.	0
+10127	Faycite: Harassing Shout	Reduces the reuse timer of spells in the Harassing Shout VII group by 6.	0
+10128	Faycite: Warrior's Auspice	Reduces the reuse timer of spells in the +G group by #1.	0
+15076	Wild Magic: Unleash	"Wild Magic: Unleash, when activated, summons either an Energizing or Revitalizing Chaotic Storm for 2 minutes. Anyone standing within the storm may be affected by either Energizing Chaotic Magic I or Revitalizing Chaotic Magic I. Energizing Chaotic Magic I restores 1% mana and endurance while draining 2% health every 6 seconds and upon landing. Revitalizing Chaotic Magic I drains 0.2% mana and endurance while restoring 2% health every 6 seconds and upon landing. Both spells also grant your melee attacks and damaging spells a chance to unleash Chaotic Strike I upon your target, dealing 40000 chromatic damage. Each of these effects grows more powerful the longer you remain within the storm.
+
+Wild Magic: Unleash can ONLY be activated when you have an enemy targeted and are currently or have recently been inside a Chaotic Storm, Wild Storm, Disturbance, or Cataclysm. Wild Storms, Disturbances, and Cataclysms are commonly found in Shattering of Ro zones.
+
+Complete the quest The Silence of Druzzil Ro - from Ao, the Fourth Born in Arcstone, Shattered Isles to unlock this ability."	0
+15077	Wild Magic: Destroy	"Wild Magic: Destroy, when activated, empowers you to destroy the next Wild Storm, Disturbance, or Cataclysm you enter for  0:00:18.
+
+Wild Magic: Destroy can ONLY be activated when you are currently or have recently been inside a Chaotic Storm, Wild Storm, Disturbance, or Cataclysm. Wild Storms, Disturbances, and Cataclysms are commonly found in Shattering of Ro zones.
+
+Complete the quest Shattered Tears: The Third Fragment - from Tsikut in Ruined Relic to unlock this ability."	0
